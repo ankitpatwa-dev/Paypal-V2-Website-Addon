@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="acquirer_form_paypal_v2" model="ir.ui.view">
+            <field name="name">acquirer.form.paypal.v2</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='after'>
+                    <group attrs="{'invisible': [('provider', '!=', 'paypal_v2')]}">
+                        <field name="paypal_client_id"/>
+                        <field name="paypal_client_secret_id"/>
+
+                        <a colspan="2" href="https://www.odoo.com/documentation/user/online/ecommerce/shopper_experience/paypal.html" target="_blank">How to configure your paypal account?</a>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        
+
+    </data>
+</odoo>

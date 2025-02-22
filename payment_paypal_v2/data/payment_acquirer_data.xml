@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="payment.payment_acquirer_paypal_v2" model="payment.acquirer">
+            <field name="name">Paypal 2</field>
+            <field name="image" type="base64" file="payment_paypal/static/src/img/paypal_icon.png"/>
+            <field name="provider">paypal_v2</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="paypal_form_v2"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the Paypal website after clicking on the payment button.</p>]]></field>
+            <field name="paypal_client_id">dummy</field>
+            <field name="paypal_client_secret_id">dummy</field>
+        </record>
+
+    </data>
+</odoo>
